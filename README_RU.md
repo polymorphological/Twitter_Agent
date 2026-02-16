@@ -1,14 +1,14 @@
-# Twitter/X AI Assistant for @NeoFounder
+# Twitter/X ИИ-Ассистент для @NeoFounder
 
-Automated Twitter/X engagement agent built on [MindStudio.ai](https://mindstudio.ai) — monitors relevant posts, scores them with a weighted point system, and generates human-like comments from a Ukrainian crypto/web3/AI founder persona.
+Автоматизированный агент вовлечения в Twitter/X на базе [MindStudio.ai](https://mindstudio.ai) — отслеживает релевантные посты, оценивает их по взвешенной системе баллов и генерирует естественные комментарии от персоны украинского основателя в крипто/web3/AI.
 
 ---
 
-## How It Works (Step by Step)
+## Как это работает (шаг за шагом)
 
-The agent has **2 independent processes** running on autopilot:
+Агент имеет **2 независимых процесса**, работающих в автопилоте:
 
-### Process 1: Auto-Replies (runs every 60 minutes)
+### Процесс 1: Авто-ответы (запуск каждые 60 минут)
 
 ```
 Every hour the agent does this:
@@ -75,7 +75,7 @@ Every hour the agent does this:
                what score each tweet got
 ```
 
-### Process 2: Daily Posts (1 tweet per day, different time each day)
+### Процесс 2: Ежедневные посты (1 твит в день, разное время)
 
 ```
 At a scheduled time (varies by day of week):
@@ -108,35 +108,35 @@ Schedule (Kyiv timezone):
 
 ---
 
-## Scoring System
+## Система оценки
 
-| Category | Weight | Scale | What It Measures |
-|----------|--------|-------|-----------------|
-| Topic Relevance | x3 | 0-10 | Does the tweet match AI/crypto/web3/SaaS/startup topics? |
-| Engagement Quality | x2 | 0-10 | Likes count, discussion potential, is it spam or real content? |
-| Author Quality | x3 | 0-10 | Followers, bio relevance, verified status, real person or bot? |
-| Freshness | x1 | 0-10 | How recently was it posted? |
+| Категория | Вес | Шкала | Что измеряет |
+|-----------|-----|-------|--------------|
+| Релевантность темы | x3 | 0-10 | Соответствует ли твит темам AI/crypto/web3/SaaS/стартап? |
+| Качество вовлечённости | x2 | 0-10 | Количество лайков, потенциал обсуждения, спам или реальный контент? |
+| Качество автора | x3 | 0-10 | Подписчики, релевантность био, верификация, реальный человек или бот? |
+| Свежесть | x1 | 0-10 | Насколько недавно опубликовано? |
 
-**Formula:** `total = (topic×3 + engagement×2 + author×3 + freshness×1) / 9`
+**Формула:** `total = (topic×3 + engagement×2 + author×3 + freshness×1) / 9`
 
-**Threshold:** Only tweets scoring **6+** get a reply. Max **10 replies/day**.
-
----
-
-## Persona: @NeoFounder
-
-The agent acts as a 28-year-old Ukrainian founder in crypto/web3/AI, currently living abroad:
-
-- **Language:** Posts always in English. Replies match the original tweet's language (EN or UA)
-- **Tone:** Casual, energetic, direct, sometimes sarcastic
-- **Slang:** bro, lol, fr fr, based, wagmi, lfg + Ukrainian: кайф, жиза, топчик
-- **Typos:** Intentional 1-2 per message (goood, definetly, teh)
-- **Emoji:** 1-3 per message, never the same pattern twice
-- **Hard rules:** Never reveals it's AI, no bullet points, no hashtags, no perfect grammar
+**Порог:** Ответ получают только твиты с оценкой **6+**. Максимум **10 ответов в день**.
 
 ---
 
-## File Structure
+## Персона: @NeoFounder
+
+Агент действует как 28-летний украинский основатель в крипто/web3/AI, в настоящее время проживающий за границей:
+
+- **Язык:** Посты всегда на английском. Ответы соответствуют языку оригинального твита (EN или UA)
+- **Тон:** Неформальный, энергичный, прямой, иногда саркастичный
+- **Сленг:** bro, lol, fr fr, based, wagmi, lfg + украинские: кайф, жиза, топчик
+- **Опечатки:** Намеренные 1-2 на сообщение (goood, definetly, teh)
+- **Эмодзи:** 1-3 на сообщение, никогда одинаковый набор дважды
+- **Строгие правила:** Никогда не выдаёт, что это ИИ; без маркированных списков, хештегов и идеальной грамматики
+
+---
+
+## Структура файлов
 
 ```
 Twitter Assistent/
@@ -151,7 +151,7 @@ Twitter Assistent/
 
 ---
 
-## MindStudio Workflow Structure
+## Структура MindStudio workflow
 
 ```
 Agent: NeoFounder X Manager
@@ -182,36 +182,36 @@ Agent: NeoFounder X Manager
 
 ---
 
-## Tech Stack
+## Технический стек
 
-- **Platform:** [MindStudio.ai](https://mindstudio.ai) (no-code, free tier)
-- **AI Models:** Claude 3.5 Haiku (replies & posts), logic blocks auto-select model
-- **X Integration:** Search X Posts, Scrape X Post, Scrape X Profile, Create X Post
-- **Cost:** ~$25-35/month (AI tokens + scraping compute)
-
----
-
-## Anti-Ban Measures
-
-- Intentional typos, slang, and emoji variation in every message
-- No hashtags, no bullet points, no AI-like phrasing
-- Sequential processing (one reply at a time, not parallel)
-- Conservative frequency: 60 min polling, max 10 replies/day
-- Night mode: no activity 23:00-07:00 Kyiv time
-- Strict quality filter: only engage with real, high-quality accounts
+- **Платформа:** [MindStudio.ai](https://mindstudio.ai) (no-code, бесплатный тариф)
+- **AI-модели:** Claude 3.5 Haiku (ответы и посты), блоки логики автоматически выбирают модель
+- **Интеграция с X:** Search X Posts, Scrape X Post, Scrape X Profile, Create X Post
+- **Стоимость:** ~$25–35 в месяц (AI-токены + вычисления парсинга)
 
 ---
 
-## Guides
+## Меры против бана
 
-| File | Language | Contents |
-|------|----------|----------|
-| [GUIDE.md](GUIDE.md) | Russian | All prompts, block-by-block instructions, variables, models, safety rules |
-| [GUIDE_EN.md](GUIDE_EN.md) | English | Same content, translated |
-| [GUIDE_UA.md](GUIDE_UA.md) | Ukrainian | Same content, translated |
+- Намеренные опечатки, сленг и разнообразие эмодзи в каждом сообщении
+- Без хештегов, маркированных списков, фраз в стиле ИИ
+- Последовательная обработка (по одному ответу, не параллельно)
+- Осторожная частота: опрос каждые 60 мин, максимум 10 ответов в день
+- Ночной режим: без активности с 23:00 до 07:00 по киевскому времени
+- Строгий фильтр качества: взаимодействие только с реальными качественными аккаунтами
 
 ---
 
-## License
+## Гайды
 
-Private project for @NeoFounder. Not for redistribution.
+| Файл | Язык | Содержание |
+|------|------|------------|
+| [GUIDE.md](GUIDE.md) | Русский | Все промпты, инструкции по блокам, переменные, модели, правила безопасности |
+| [GUIDE_EN.md](GUIDE_EN.md) | Английский | Тот же контент, переведён |
+| [GUIDE_UA.md](GUIDE_UA.md) | Украинский | Тот же контент, переведён |
+
+---
+
+## Лицензия
+
+Приватный проект для @NeoFounder. Запрещено распространение.
