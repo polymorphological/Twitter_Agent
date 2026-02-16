@@ -1,0 +1,5 @@
+---
+alwaysApply: true
+---
+
+- Follow existing code style and conventions- Do not introduce new patterns without justification- Avoid overengineering and abstractions

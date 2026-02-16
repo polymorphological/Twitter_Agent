@@ -1,0 +1,5 @@
+---
+alwaysApply: true
+---
+
+- Never modify .env, .gitignore, lock files unless explicitly requested- Never delete files unless explicitly requested- Work only inside the current project scope

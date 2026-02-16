@@ -1,0 +1,5 @@
+---
+alwaysApply: true
+---
+
+- Do NOT change project architecture unless explicitly asked- Do NOT refactor unrelated code- Do NOT rewrite entire files if a partial change is sufficient- Prefer minimal, incremental changes- If requirements are unclear — ASK before implementing
