@@ -78,6 +78,8 @@ Every hour the agent does this:
 ```
 
 ### Process 2: Daily Posts (1 tweet per day, different time each day)
+<img width="1888" height="886" alt="image" src="https://github.com/user-attachments/assets/77f973be-f780-4513-9a78-5018a149df4c" />
+
 
 ```
 At a scheduled time (varies by day of week):
