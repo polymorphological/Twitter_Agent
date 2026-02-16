@@ -9,6 +9,8 @@ Automated Twitter/X engagement agent built on [MindStudio.ai](https://mindstudio
 The agent has **2 independent processes** running on autopilot:
 
 ### Process 1: Auto-Replies (runs every 60 minutes)
+<img width="2273" height="944" alt="image" src="https://github.com/user-attachments/assets/b157cdc9-4af4-4a87-aa0d-65044f7c0b96" />
+
 
 ```
 Every hour the agent does this:
